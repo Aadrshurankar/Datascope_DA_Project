@@ -121,13 +121,53 @@ st.markdown(
       .stDownloadButton button { border:1px solid #d8c9ff; color:#5b21b6; background:#fff; }
       @media (max-width:1050px) { .summary-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } .info-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
       @media (max-width:700px) { .block-container { padding-left:.8rem; padding-right:.8rem; } .topbar { align-items:flex-start; flex-direction:column; } .brand-name { font-size:1.5rem; } .top-pill { white-space:normal; } .summary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .info-grid { grid-template-columns:1fr; } }
+
+      /* Professional business dashboard theme */
+      .stApp {
+        color:#172b4d !important;
+        background:linear-gradient(180deg,#f8fafc 0%,#f1f5f9 100%) !important;
+      }
+      :root { --ink:#172b4d; --muted:#64748b; --line:#dbe3ed; --purple:#2563eb; --pink:#2563eb; --blue:#2563eb; }
+      .topbar {
+        position:relative; margin:0 0 1.4rem; padding:1rem 1.25rem;
+        border:1px solid #e2e8f0; border-radius:16px;
+        background:rgba(255,255,255,.96); box-shadow:0 4px 16px rgba(15,23,42,.045);
+      }
+      .brand-icon { background:linear-gradient(145deg,#2563eb,#1d4ed8) !important; box-shadow:0 5px 14px rgba(37,99,235,.16) !important; border-radius:12px !important; }
+      .brand-name { color:#0f172a !important; }
+      .brand-name span { color:#2563eb !important; background:none !important; -webkit-text-fill-color:#2563eb !important; }
+      .brand-sub { color:#64748b !important; }
+      [data-testid="stVerticalBlockBorderWrapper"], div[data-testid="stTabContent"] {
+        border-color:#e2e8f0 !important; background:#fff !important;
+        box-shadow:0 5px 18px rgba(15,23,42,.035) !important; border-radius:16px !important;
+      }
+      .heading-icon.pink { color:#2563eb !important; background:#eff6ff !important; border-color:#dbeafe !important; }
+      .heading-icon.blue { color:#2563eb !important; background:#eff6ff !important; border-color:#dbeafe !important; }
+      .card-title .accent { color:#2563eb !important; }
+      div[data-testid="stFileUploader"] {
+        border-color:#93c5fd !important; background:#f8fbff !important; border-radius:14px !important;
+      }
+      div[data-testid="stFileUploader"] section { background:#fff !important; }
+      div[data-testid="stFileUploader"] button { color:#1d4ed8 !important; border-color:#bfdbfe !important; }
+      .summary-card { background:#fff !important; border-color:#e2e8f0 !important; border-radius:12px !important; }
+      .tone-blue,.tone-pink,.tone-gold,.tone-green,.tone-purple { background:#fff !important; }
+      .icon-blue,.icon-pink,.icon-gold,.icon-green,.icon-purple { color:#2563eb !important; background:#eff6ff !important; }
+      .loaded-banner { border-color:#bfdbfe !important; background:#eff6ff !important; color:#1d4ed8 !important; }
+      div[data-testid="stTabs"] > div[role="tablist"] { background:#fff !important; border-color:#e2e8f0 !important; }
+      div[data-testid="stTabs"] button[role="tab"] { color:#475569 !important; }
+      div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] { color:#fff !important; background:#2563eb !important; }
+      .empty-overview .empty-symbol { background:#eff6ff !important; color:#2563eb !important; }
+      .empty-overview .empty-tip { color:#2563eb !important; }
+      .stDownloadButton button { color:#1d4ed8 !important; border-color:#bfdbfe !important; }
+      .footer { color:#64748b !important; border-color:#e2e8f0 !important; }
+      @media (max-width:700px) { .topbar { padding:.85rem; } }
+
     </style>
     <div class="topbar">
       <div class="brand">
         <div class="brand-icon">▥</div>
         <div><div class="brand-name">Data<span>Scope</span></div><div class="brand-sub">From raw data to clear insights.</div></div>
       </div>
-      <div class="top-pill"><span>✦</span> One dataset · Clean insights · Better decisions</div>
     </div>
     """,
     unsafe_allow_html=True,
