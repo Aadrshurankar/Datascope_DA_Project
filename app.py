@@ -162,7 +162,15 @@ st.markdown(
       .footer { color:#64748b !important; border-color:#e2e8f0 !important; }
       @media (max-width:700px) { .topbar { padding:.85rem; } }
 
-    </style>
+
+      /* Match the upload and overview panels in width and minimum height */
+      .block-container > div > div[data-testid="stHorizontalBlock"] > div[data-testid="column"] > div[data-testid="stVerticalBlock"] > div[data-testid="stVerticalBlockBorderWrapper"] {
+        min-height: 430px !important;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .empty-overview { min-height: 330px; }
+\n    </style>
     <div class="topbar">
       <div class="brand">
         <div class="brand-icon">▥</div>
@@ -438,7 +446,7 @@ def render_dataset(df: pd.DataFrame, source_label: str) -> None:
 
 
 # ---------- Main page: upload left, dataset information right ----------
-left_col, right_col = st.columns([0.91, 1.55], gap="large", vertical_alignment="top")
+left_col, right_col = st.columns([1, 1], gap="large", vertical_alignment="top")
 with left_col:
     with st.container(border=True):
         st.markdown(
